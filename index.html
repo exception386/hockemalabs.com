@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hockema Labs LLC</title>
+  <meta
+    name="description"
+    content="Hockema Labs LLC is an independent software company focused on mobile applications, games, and software tools."
+  />
+  <style>
+    :root {
+      --bg-top: #04142f;
+      --bg-bottom: #00091d;
+      --panel: rgba(8, 26, 60, 0.9);
+      --panel-border: rgba(85, 130, 220, 0.18);
+      --text: #e8eefc;
+      --muted: #b7c5e8;
+      --accent: #ffd43b;
+      --link: #ffd43b;
+      --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+      --radius: 24px;
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, #0a255a 0%, var(--bg-top) 30%, var(--bg-bottom) 100%);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(2, 10, 28, 0.78);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      padding: 14px 16px;
+      flex-wrap: wrap;
+      font-size: 0.94rem;
+      font-weight: 500;
+    }
+
+    .nav a {
+      color: var(--text);
+      opacity: 0.92;
+    }
+
+    .nav a:hover {
+      color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    header {
+      padding: 28px 0 8px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 620px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 6px;
+    }
+
+    .tagline {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+
+    main {
+      padding-bottom: 4px;
+    }
+
+    section.card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px 28px 24px;
+      margin: 18px 0;
+      scroll-margin-top: 60px;
+    }
+
+    main .card:first-child {
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      text-align: center;
+      font-size: clamp(1.6rem, 2.1vw, 2.15rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    .lead {
+      font-size: 1rem;
+      margin: 0 0 10px;
+    }
+
+    .muted {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.97rem;
+    }
+
+    .product-head {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-bottom: 12px;
+    }
+
+    .product-badge {
+      display: inline-block;
+      background: rgba(255, 212, 59, 0.14);
+      border: 1px solid rgba(255, 212, 59, 0.22);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-weight: 700;
+      font-size: 0.74rem;
+      letter-spacing: 0.02em;
+      line-height: 1;
+      opacity: 0.92;
+    }
+
+    .product-title {
+      display: inline-block;
+      font-size: clamp(1.45rem, 2vw, 1.85rem);
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 14px 0 0;
+      font-size: 0.97rem;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .product-link {
+      margin-top: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .contact p {
+      margin: 0;
+    }
+
+    footer {
+      padding: 22px 0 100vh;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    @media (max-width: 760px) {
+      section.card {
+        padding: 20px 18px 22px;
+        margin: 16px 0;
+      }
+
+      .product-head {
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .product-title {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="wrap">
+    <img src="images/hockema-labs-logo.png" alt="Hockema Labs LLC logo" class="logo" />
+    <p class="tagline">Mobile Application and Game Development</p>
+  </header>
+
+  <main class="wrap">
+
+    <section class="card" id="about">
+      <h2>About</h2>
+      <p class="lead">
+        <strong>Hockema Labs LLC</strong> is an independent software company based in Springfield, Oregon, United States founded by Jeff Hockema in 2026.
+      </p>
+      <p class="muted">
+        We develop mobile applications, games, and software tools, and publish original digital products designed to be simple, reliable, and respectful of the user experience.
+      </p>
+    </section>
+
+    <section class="card" id="products">
+      <h2>Products</h2>
+
+      <div class="product-head">
+        <span class="product-badge">iOS Game</span>
+        <span class="product-title">House Edge Casino</span>
+      </div>
+
+      <p class="lead">
+        A casino simulation game developed and published by Hockema Labs LLC.
+      </p>
+
+      <ul>
+        <li>Includes blackjack, slots, roulette, and video poker.</li>
+        <li>Features strategy guidance, achievements, and leaderboards.</li>
+        <li>No real-money gambling. </li>
+      </ul>
+
+      <p class="muted product-link">
+        Official website:
+        <a href="https://houseedgecasino.com" target="_blank" rel="noopener noreferrer">houseedgecasino.com</a>
+      </p>
+    </section>
+
+    <section class="card contact" id="contact">
+      <h2>Contact</h2>
+      <p>
+        For general inquiries, email
+        <a href="mailto:contactus@hockemalabs.com">contactus@hockemalabs.com</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Hockema Labs LLC. All rights reserved.
+  </footer>
+
+</body>
+</html>
